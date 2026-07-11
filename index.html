@@ -119,7 +119,7 @@
             color: #ffffff;
         }
 
-        /* Bottom Status Banner (Replacing the countdown layout) */
+        /* Bottom Status Banner */
         .status-banner {
             background: linear-gradient(90deg, rgba(134, 239, 172, 0.2), rgba(167, 139, 250, 0.2), rgba(252, 165, 165, 0.2));
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -133,7 +133,7 @@
             flex-direction: column;
         }
         .stat-value {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 400;
             color: #ffffff;
             letter-spacing: 1px;
@@ -154,25 +154,24 @@
             <div class="studio-tag">SnowForge Studios</div>
             <h1>Coming Soon</h1>
             <p class="description">
-                Building uncompromising 2D and 3D action worlds. The forge is heating up. Leave your email to receive development dispatches and alpha testing updates.
+                Hi, I’m Otis [cite: 1, 193]—a student , passionate game developer [cite: 8], and the founder of SnowForge Studios[cite: 95]. Fueled by a love for both 2D and 3D action worlds [cite: 34, 193], I’m currently building my technical foundations from the ground up[cite: 22]. Feel free to reach out and share your structural suggestions as I begin this journey[cite: 194, 195]!
             </p>
             
-            <form class="signup-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
-                <input type="email" class="email-input" placeholder="Email address" required>
+            <form class="signup-form" action="mailto:otis@snowforgestudios.com" method="post" enctype="text/plain">
+                <input type="email" name="VisitorEmail" class="email-input" placeholder="Email address" required>
                 <button type="submit" class="submit-btn">Sign Up &rarr;</button>
             </form>
 
             <div class="socials">
-                <a href="#" target="_blank">𝕏 Twitter</a>
-                <a href="#" target="_blank">🕹️ Itch.io</a>
-                <a href="#" target="_blank">✉️ Contact</a>
+                <a href="https://x.com/teamsnowforge" target="_blank">𝕏 X</a>
+                <a href="mailto:otis@snowforgestudios.com">✉️ Contact</a>
             </div>
         </div>
 
         <div class="status-banner">
             <div class="stat-item">
-                <span class="stat-value">Godot</span>
-                <span class="stat-label">Engine</span>
+                <span class="stat-value">Godot & Unity</span>
+                <span class="stat-label">Game Engines</span>
             </div>
             <div class="stat-item">
                 <span class="stat-value">2D</span>
