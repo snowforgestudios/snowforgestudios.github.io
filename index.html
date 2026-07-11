@@ -1,14 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnowForge Studios</title>
     <style>
-        body { background: #121214; color: #e1e1e6; font-family: sans-serif; text-align: center; padding-top: 50px; }
-        h1 { color: #00b0ff; }
+        /* Base Page Setup */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #e1e1e6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Central Container Card */
+        .studio-card {
+            background: rgba(30, 30, 36, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 520px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main Content Section */
+        .card-body {
+            padding: 40px 40px 30px 40px;
+        }
+        .studio-tag {
+            color: #a78bfa;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .description {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Newsletter Input & Button */
+        .signup-form {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .email-input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            border-radius: 8px;
+            padding: 14px 16px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .email-input:focus {
+            border-color: #a78bfa;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #86efac, #a78bfa, #fca5a5);
+            border: none;
+            border-radius: 8px;
+            padding: 0 24px;
+            color: #121214;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.2s;
+        }
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Social Icons Row */
+        .socials {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .socials a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .socials a:hover {
+            color: #ffffff;
+        }
+
+        /* Bottom Status Banner (Replacing the countdown layout) */
+        .status-banner {
+            background: linear-gradient(90deg, rgba(134, 239, 172, 0.2), rgba(167, 139, 250, 0.2), rgba(252, 165, 165, 0.2));
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+        }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-value {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body>
-    <h1>SnowForge Studios</h1>
-    <p>Under Construction. The forge is heating up...</p>
+
+    <div class="studio-card">
+        <div class="card-body">
+            <div class="studio-tag">SnowForge Studios</div>
+            <h1>Coming Soon</h1>
+            <p class="description">
+                Building uncompromising 2D and 3D action worlds. The forge is heating up. Leave your email to receive development dispatches and alpha testing updates.
+            </p>
+            
+            <form class="signup-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                <input type="email" class="email-input" placeholder="Email address" required>
+                <button type="submit" class="submit-btn">Sign Up &rarr;</button>
+            </form>
+
+            <div class="socials">
+                <a href="#" target="_blank">𝕏 Twitter</a>
+                <a href="#" target="_blank">🕹️ Itch.io</a>
+                <a href="#" target="_blank">✉️ Contact</a>
+            </div>
+        </div>
+
+        <div class="status-banner">
+            <div class="stat-item">
+                <span class="stat-value">Godot</span>
+                <span class="stat-label">Engine</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">2D</span>
+                <span class="stat-label">Dimension</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">01</span>
+                <span class="stat-label">Active Project</span>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
